@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dancing Monkeys</title>
+  <style>
+    body {
+      background-color: black;
+    }
+    
+    .monkey-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    
+    .monkey {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      animation: dance 2s infinite;
+    }
+    
+    .monkey img {
+      width: 100%;
+      height: 100%;
+    }
+    
+    @keyframes dance {
+      0% { transform: rotate(0); }
+      50% { transform: rotate(360deg); }
+      100% { transform: rotate(0); }
+    }
+    
+    .neon-border {
+      border: 2px solid yellow;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="monkey-container">
+    <div class="monkey">
+      <img src="path/to/monkey.gif" alt="Dancing Monkey">
+    </div>
+  </div>
+  
+  <h1 class="neon-border">Welcome to the Dancing Monkeys Website!</h1>
+  
+  <script>
+    // Add more monkeys
+    for (let i = 0; i < 10; i++) {
+      const monkeyContainer = document.createElement('div');
+      monkeyContainer.className = 'monkey-container';
+      
+      const monkey = document.createElement('div');
+      monkey.className = 'monkey';
+      
+      const monkeyImage = document.createElement('img');
+      monkeyImage.src = 'path/to/monkey.gif';
+      monkeyImage.alt = 'Dancing Monkey';
+      
+      monkey.appendChild(monkeyImage);
+      monkeyContainer.appendChild(monkey);
+      
+      document.body.appendChild(monkeyContainer);
+    }
+  </script>
+</body>
+</html>
