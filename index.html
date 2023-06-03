@@ -5,23 +5,25 @@
   <style>
     body {
       background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
     }
     
     .monkey-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9999;
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+      animation: dance 2s infinite;
     }
     
     .monkey {
       position: absolute;
-      width: 150px;
-      height: 150px;
-      animation: dance 2s infinite;
+      width: 100%;
+      height: 100%;
     }
     
     .monkey img {
@@ -34,23 +36,28 @@
       50% { transform: rotate(360deg); }
       100% { transform: rotate(0); }
     }
-    
-    .neon-border {
-      border: 2px solid yellow;
-      padding: 10px;
-      border-radius: 10px;
-      display: inline-block;
-    }
   </style>
 </head>
 <body>
   <div class="monkey-container">
     <div class="monkey">
-      <img src="https://github.com/ulynixonthebest/ulynixonthebest.github.io/blob/main/monkey.gif" alt="Dancing Monkey">
+      <img src="https://raw.githubusercontent.com/ulynixonthebest/ulynixonthebest.github.io/main/monkey.gif" alt="Dancing Monkey">
     </div>
   </div>
   
-  <h1 class="neon-border">Welcome to the Dancing Monkeys Website!</h1>
+  <div class="monkey-container">
+    <div class="monkey">
+      <img src="https://raw.githubusercontent.com/ulynixonthebest/ulynixonthebest.github.io/main/monkey.gif" alt="Dancing Monkey">
+    </div>
+  </div>
+  
+  <div class="monkey-container">
+    <div class="monkey">
+      <img src="https://raw.githubusercontent.com/ulynixonthebest/ulynixonthebest.github.io/main/monkey.gif" alt="Dancing Monkey">
+    </div>
+  </div>
+  
+  <!-- Add more monkey containers as needed -->
   
   <script>
     // Add more monkeys
@@ -62,7 +69,7 @@
       monkey.className = 'monkey';
       
       const monkeyImage = document.createElement('img');
-      monkeyImage.src = 'https://github.com/ulynixonthebest/ulynixonthebest.github.io/blob/main/monkey.gif';
+      monkeyImage.src = 'https://raw.githubusercontent.com/ulynixonthebest/ulynixonthebest.github.io/main/monkey.gif';
       monkeyImage.alt = 'Dancing Monkey';
       
       monkey.appendChild(monkeyImage);
