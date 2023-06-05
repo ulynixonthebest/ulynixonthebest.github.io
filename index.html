@@ -17,18 +17,22 @@
       width: 150px;
       height: 150px;
       margin: 10px;
-      animation: dance 2s infinite;
     }
     
     .monkey {
       position: absolute;
       width: 100%;
       height: 100%;
+      transition: transform 0.5s ease;
     }
     
     .monkey img {
       width: 100%;
       height: 100%;
+    }
+    
+    .monkey-container:hover .monkey {
+      animation: dance 2s infinite;
     }
     
     @keyframes dance {
